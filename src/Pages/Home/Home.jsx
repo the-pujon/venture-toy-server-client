@@ -20,7 +20,7 @@ const Home = () => {
       </div>
       <div className="flex justify-center items-center gap-3 sm:flex-col md:flex-row mx-3 h-screen ">
         <div className="text-6xl">Our Toy Gallery</div>
-        <Gallery1 />
+        <Gallery1 loadedToys={loadedToys} />
       </div>
       <div>
         <Shop loadedToys={loadedToys} />

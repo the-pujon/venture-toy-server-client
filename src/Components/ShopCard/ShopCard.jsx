@@ -5,7 +5,7 @@ const ShopCard = ({ toy }) => {
     <div>
       <div className="card lg:card-side bg-base-100 h-64 shadow-xl">
         <figure className=" w-1/2">
-          <img src={toy.picture} alt="Album" className="" />
+          <img src={toy.photoURL} alt="Album" className="" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{toy.name}</h2>

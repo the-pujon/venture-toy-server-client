@@ -6,7 +6,11 @@ import banner1 from "../../assets/Banner/banner1.jpg";
 import banner2 from "../../assets/Banner/banner2.jpg";
 import banner3 from "../../assets/Banner/banner3.jpg";
 
-const Gallery1 = () => {
+const Gallery1 = ({ loadedToys }) => {
+  const allImg = loadedToys.map((toy) => toy.photoURL);
+
+  console.log(allImg);
+
   const images = [
     {
       src: `${banner2}`,

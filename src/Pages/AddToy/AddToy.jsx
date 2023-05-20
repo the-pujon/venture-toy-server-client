@@ -30,7 +30,18 @@ const AddToy = () => {
       description,
     };
 
-    console.log(addedToy);
+    fetch("http://localhost:5000/toys", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(addedToy),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => console.error(err));
   };
 
   return (
