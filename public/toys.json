@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "picture": "https://cdn.shopify.com/s/files/1/0011/8367/8476/products/spiderman_ec3e3e47-0a8c-4ab4-b1c4-8253209e91af.png?v=1666259147",
+        "name": "Spider-Man",
+        "price": 19.99,
+        "rating": 4.5,
+        "category": "Marvel"
+    },
+    {
+        "id": 2,
+        "picture": "https://www.fortressofsolitude.co.za/wp-content/uploads/2019/03/Batman-Action-Figures-PlayArts.jpg",
+        "name": "Batman",
+        "price": 24.99,
+        "rating": 4.8,
+        "category": "DC"
+    },
+    {
+        "id": 3,
+        "picture": "star-wars-yoda.jpg",
+        "name": "Yoda",
+        "price": 29.99,
+        "rating": 4.7,
+        "category": "Star Wars"
+    },
+    {
+        "id": 4,
+        "picture": "transformers-optimus-prime.jpg",
+        "name": "Optimus Prime",
+        "price": 34.99,
+        "rating": 4.6,
+        "category": "Transformers"
+    },
+    {
+        "id": 5,
+        "picture": "https://cdn.shopify.com/s/files/1/0169/6995/7440/products/F3483_PROD_MVL_LEGENDS_SDCC1_0003_Online_2000SQ_600x600.jpg?v=1664644397",
+        "name": "Iron Man",
+        "price": 22.99,
+        "rating": 4.4,
+        "category": "Marvel"
+    },
+    {
+        "id": 6,
+        "picture": "https://media.gettyimages.com/id/471592903/photo/superman-and-bent-metal.jpg?s=612x612&w=gi&k=20&c=j55R9l-M_nT0et4KzRZU2XC_94GJLTSeey-OlQbuGf4=",
+        "name": "Superman",
+        "price": 27.99,
+        "rating": 4.7,
+        "category": "DC"
+    },
+    {
+        "id": 7,
+        "picture": "star-wars-darth-vader.jpg",
+        "name": "Darth Vader",
+        "price": 31.99,
+        "rating": 4.9,
+        "category": "Star Wars"
+    },
+    {
+        "id": 8,
+        "picture": "transformers-bumblebee.jpg",
+        "name": "Bumblebee",
+        "price": 29.99,
+        "rating": 4.5,
+        "category": "Transformers"
+    },
+    {
+        "id": 9,
+        "picture": "https://cdn11.bigcommerce.com/s-csqcv5l47s/images/stencil/804x804/products/2407/5538/CAP_AMERICA_SELECT_2__99284.1681745340.jpg?c=1",
+        "name": "Captain America",
+        "price": 23.99,
+        "rating": 4.6,
+        "category": "Marvel"
+    },
+    {
+        "id": 10,
+        "picture": "dc-wonder-woman.jpg",
+        "name": "Wonder Woman",
+        "price": 26.99,
+        "rating": 4.7,
+        "category": "DC"
+    },
+    {
+        "id": 11,
+        "picture": "star-wars-luke-skywalker.jpg",
+        "name": "Luke Skywalker",
+        "price": 28.99,
+        "rating": 4.8,
+        "category": "Star Wars"
+    },
+    {
+        "id": 12,
+        "picture": "https://cdn.shopify.com/s/files/1/0169/6995/7440/products/E5795_Marvel_80th_Anniversary_Hulk_Action_Figure_01.jpg?v=1568739416",
+        "name": "Hulk",
+        "price": 25.99,
+        "rating": 4.3,
+        "category": "Marvel"
+    },
+    {
+        "id": 13,
+        "picture": "dc-aquaman.jpg",
+        "name": "Aquaman",
+        "price": 27.99,
+        "rating": 4.5,
+        "category": "DC"
+    },
+    {
+        "id": 14,
+        "picture": "star-wars-kylo-ren.jpg",
+        "name": "Kylo Ren",
+        "price": 32.99,
+        "rating": 4.7,
+        "category": "Star Wars"
+    },
+    {
+        "id": 15,
+        "picture": "transformers-megatron.jpg",
+        "name": "Megatron",
+        "price": 33.99,
+        "rating": 4.6,
+        "category": "Transformers"
+    },
+    {
+        "id": 16,
+        "picture": "https://www.laughingplace.com/w/wp-content/uploads/2022/04/thor-gorr-king-valkyrie-and-more-hasbro-reveals-thor-love-and-thunder-marvel-legends-action-figures.jpeg",
+        "name": "Thor",
+        "price": 24.99,
+        "rating": 4.8,
+        "category": "Marvel"
+    },
+    {
+        "id": 17,
+        "picture": "dc-joker.jpg",
+        "name": "Joker",
+        "price": 21.99,
+        "rating": 4.7,
+        "category": "DC"
+    },
+    {
+        "id": 18,
+        "picture": "star-wars-r2d2.jpg",
+        "name": "R2-D2",
+        "price": 30.99,
+        "rating": 4.9,
+        "category": "Star Wars"
+    },
+    {
+        "id": 19,
+        "picture": "transformers-starscream.jpg",
+        "name": "Starscream",
+        "price": 29.99,
+        "rating": 4.5,
+        "category": "Transformers"
+    },
+    {
+        "id": 20,
+        "picture": "https://cdn.shopify.com/s/files/1/1163/0056/products/black-widow_marvel_gallery_60ef2bd54fafb_535x.jpg?v=1626549611",
+        "name": "Black Widow",
+        "price": 23.99,
+        "rating": 4.6,
+        "category": "Marvel"
+    }
+]

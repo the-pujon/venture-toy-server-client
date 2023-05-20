@@ -115,7 +115,7 @@ const Login = () => {
                 <div
                   className="btn btn-circle  "
                   style={{ background: "#263238" }}
-                  //onClick={handleGithubLogin}
+                  onClick={handleGithubLogin}
                 >
                   <FaGithub className="text-3xl" />
                 </div>
