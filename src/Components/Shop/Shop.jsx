@@ -13,7 +13,7 @@ const Shop = ({ loadedToys }) => {
       setUsedToy(toys);
       console.log(usedToy);
     } else {
-      setUsedToy(toys.filter((toy) => toy.category === categoryName));
+      setUsedToy(toys.filter((toy) => toy.subCategory === categoryName));
     }
   };
 
@@ -35,7 +35,7 @@ const Shop = ({ loadedToys }) => {
             <TabPanel key={index}>
               <div className="grid gap-4 m-8 grid-cols-2">
                 {usedToy.map((toy) => (
-                  <div key={toy.id}>
+                  <div key={toy._id}>
                     <ShopCard toy={toy} />
                   </div>
                 ))}
