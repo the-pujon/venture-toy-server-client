@@ -6,9 +6,12 @@ import "./AllToys.scss";
 export const AllToys = () => {
   const allLoadedToys = useLoaderData();
 
-  const [loadedToys, setLoadedToys] = useState(allLoadedToys);
   const [filteredToys, setFilteredToys] = useState(allLoadedToys);
   const [search, setSearch] = useState("");
+
+  const shortListedToy = allLoadedToys.slice(0, 20);
+  //setFilteredToys(shortListedToy);
+  const [loadedToys, setLoadedToys] = useState(shortListedToy);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -34,6 +37,10 @@ export const AllToys = () => {
     });
     console.log(toySearch);
     setFilteredToys(toySearch);
+  };
+
+  const handleShowMore = () => {
+    setFilteredToys(allLoadedToys);
   };
 
   return (
@@ -126,6 +133,13 @@ export const AllToys = () => {
           </tbody>
           {/* foot */}
         </table>
+        {allLoadedToys.length > 20 ? (
+          <button className="btn bg[#263238]  " onClick={handleShowMore}>
+            Show more
+          </button>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
