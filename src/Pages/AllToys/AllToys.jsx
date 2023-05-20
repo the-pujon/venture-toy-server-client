@@ -1,9 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import banner from "../../assets/Banner/banner3.jpg";
+import "./AllToys.scss";
 
 export const AllToys = () => {
   const allLoadedToys = useLoaderData();
+
+  const [loadedToys, setLoadedToys] = useState(allLoadedToys);
+  const [filteredToys, setFilteredToys] = useState(allLoadedToys);
+  const [search, setSearch] = useState("");
+
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  useEffect(() => {
+    let value = search.toLowerCase();
+    let toySearch = loadedToys.filter((data) => {
+      const name = data.name.toLowerCase();
+      return name.startsWith(value);
+    });
+    setFilteredToys(toySearch);
+  }, [search]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let value = search.toLowerCase();
+
+    let toySearch = loadedToys.filter((data) => {
+      const name = data.name.toLowerCase();
+      return name === value;
+    });
+    console.log(toySearch);
+    setFilteredToys(toySearch);
+  };
 
   return (
     <div>
@@ -21,6 +52,23 @@ export const AllToys = () => {
           </div>
         </div>
       </div>
+
+      {/* search */}
+      <form
+        className="flex justify-center items-center gap-4 m-4"
+        onSubmit={handleSubmit}
+      >
+        <input
+          type="search"
+          placeholder="search country"
+          value={search}
+          onChange={handleChange}
+          className="search"
+        />
+        <button type="submit" className="btn bg-[#263238]">
+          Search
+        </button>
+      </form>
 
       {/* Table */}
       <div className="overflow-x-auto w-full">
@@ -44,7 +92,7 @@ export const AllToys = () => {
           <tbody>
             {/* row 1 */}
 
-            {allLoadedToys.map((loadedToy) => (
+            {filteredToys.map((loadedToy) => (
               <tr key={loadedToy._id}>
                 {/*<th>
                 <label>
