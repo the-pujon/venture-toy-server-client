@@ -1,162 +1,233 @@
 [
     {
-        "id": 1,
-        "picture": "https://cdn.shopify.com/s/files/1/0011/8367/8476/products/spiderman_ec3e3e47-0a8c-4ab4-b1c4-8253209e91af.png?v=1666259147",
+        "picture": "marvel-spiderman.jpg",
         "name": "Spider-Man",
+        "sellerName": "Toy Universe",
+        "sellerEmail": "toyuniverse@example.com",
+        "category": "Marvel",
         "price": 19.99,
         "rating": 4.5,
-        "category": "Marvel"
+        "quantity": 10,
+        "description": "Bring home your friendly neighborhood Spider-Man action figure and join him on exciting adventures!"
     },
     {
-        "id": 2,
-        "picture": "https://www.fortressofsolitude.co.za/wp-content/uploads/2019/03/Batman-Action-Figures-PlayArts.jpg",
+        "picture": "dc-batman.jpg",
         "name": "Batman",
+        "sellerName": "Super Toy Store",
+        "sellerEmail": "supertoystore@example.com",
+        "category": "DC",
         "price": 24.99,
         "rating": 4.8,
-        "category": "DC"
+        "quantity": 8,
+        "description": "Unleash the Dark Knight with this detailed Batman action figure. Perfect for fans of the Caped Crusader!"
     },
     {
-        "id": 3,
         "picture": "star-wars-yoda.jpg",
         "name": "Yoda",
+        "sellerName": "Galactic Toys",
+        "sellerEmail": "galactictoys@example.com",
+        "category": "Star Wars",
         "price": 29.99,
         "rating": 4.7,
-        "category": "Star Wars"
+        "quantity": 12,
+        "description": "Master the Force with the wise and powerful Yoda action figure. May the Force be with you!"
     },
     {
-        "id": 4,
         "picture": "transformers-optimus-prime.jpg",
         "name": "Optimus Prime",
+        "sellerName": "Robot Depot",
+        "sellerEmail": "robotdepot@example.com",
+        "category": "Transformers",
         "price": 34.99,
         "rating": 4.6,
-        "category": "Transformers"
+        "quantity": 5,
+        "description": "Lead the Autobots into battle with this iconic Optimus Prime action figure. Transform and roll out!"
     },
     {
-        "id": 5,
-        "picture": "https://cdn.shopify.com/s/files/1/0169/6995/7440/products/F3483_PROD_MVL_LEGENDS_SDCC1_0003_Online_2000SQ_600x600.jpg?v=1664644397",
+        "picture": "marvel-ironman.jpg",
         "name": "Iron Man",
+        "sellerName": "Hero Haven",
+        "sellerEmail": "herohaven@example.com",
+        "category": "Marvel",
         "price": 22.99,
         "rating": 4.4,
-        "category": "Marvel"
+        "quantity": 15,
+        "description": "Suit up as Tony Stark's armored Avenger with this incredible Iron Man action figure. Ready for action!"
     },
     {
-        "id": 6,
-        "picture": "https://media.gettyimages.com/id/471592903/photo/superman-and-bent-metal.jpg?s=612x612&w=gi&k=20&c=j55R9l-M_nT0et4KzRZU2XC_94GJLTSeey-OlQbuGf4=",
+        "picture": "dc-superman.jpg",
         "name": "Superman",
+        "sellerName": "Comic Corner",
+        "sellerEmail": "comiccorner@example.com",
+        "category": "DC",
         "price": 27.99,
         "rating": 4.7,
-        "category": "DC"
+        "quantity": 7,
+        "description": "Soar through the skies as the Man of Steel with this powerful Superman action figure. Embrace your inner superhero!"
     },
     {
-        "id": 7,
         "picture": "star-wars-darth-vader.jpg",
         "name": "Darth Vader",
+        "sellerName": "Dark Side Collectibles",
+        "sellerEmail": "darksidetoys@example.com",
+        "category": "Star Wars",
         "price": 31.99,
         "rating": 4.9,
-        "category": "Star Wars"
+        "quantity": 3,
+        "description": "Join the Dark Side with the Sith Lord Darth Vader action figure. Rule the galaxy with the power of the Force!"
     },
     {
-        "id": 8,
         "picture": "transformers-bumblebee.jpg",
         "name": "Bumblebee",
-        "price": 29.99,
+        "sellerName": "Autobot Traders",
+        "sellerEmail": "autobottraders@example.com",
+        "category": "Transformers",
+        "price": 26.99,
         "rating": 4.5,
-        "category": "Transformers"
+        "quantity": 9,
+        "description": "Race into action with the brave Autobot Bumblebee action figure. Protect the Earth from the Decepticons!"
     },
     {
-        "id": 9,
-        "picture": "https://cdn11.bigcommerce.com/s-csqcv5l47s/images/stencil/804x804/products/2407/5538/CAP_AMERICA_SELECT_2__99284.1681745340.jpg?c=1",
+        "picture": "marvel-captain-america.jpg",
         "name": "Captain America",
+        "sellerName": "Heroic Collectibles",
+        "sellerEmail": "heroiccollectibles@example.com",
+        "category": "Marvel",
         "price": 23.99,
-        "rating": 4.6,
-        "category": "Marvel"
+        "rating": 4.7,
+        "quantity": 11,
+        "description": "Fight for justice and freedom with the patriotic Captain America action figure. Assemble the Avengers!"
     },
     {
-        "id": 10,
         "picture": "dc-wonder-woman.jpg",
         "name": "Wonder Woman",
-        "price": 26.99,
-        "rating": 4.7,
-        "category": "DC"
-    },
-    {
-        "id": 11,
-        "picture": "star-wars-luke-skywalker.jpg",
-        "name": "Luke Skywalker",
+        "sellerName": "Amazon Toys",
+        "sellerEmail": "amazontoys@example.com",
+        "category": "DC",
         "price": 28.99,
+        "rating": 4.6,
+        "quantity": 6,
+        "description": "Embrace your inner warrior with the mighty Wonder Woman action figure. Defend truth, justice, and equality!"
+    },
+    {
+        "picture": "star-wars-obi-wan.jpg",
+        "name": "Obi-Wan Kenobi",
+        "sellerName": "Jedi Emporium",
+        "sellerEmail": "jediemporium@example.com",
+        "category": "Star Wars",
+        "price": 33.99,
         "rating": 4.8,
-        "category": "Star Wars"
+        "quantity": 4,
+        "description": "Train in the ways of the Force with the legendary Jedi Knight Obi-Wan Kenobi action figure. May the Force be with you!"
     },
     {
-        "id": 12,
-        "picture": "https://cdn.shopify.com/s/files/1/0169/6995/7440/products/E5795_Marvel_80th_Anniversary_Hulk_Action_Figure_01.jpg?v=1568739416",
-        "name": "Hulk",
-        "price": 25.99,
-        "rating": 4.3,
-        "category": "Marvel"
-    },
-    {
-        "id": 13,
-        "picture": "dc-aquaman.jpg",
-        "name": "Aquaman",
-        "price": 27.99,
-        "rating": 4.5,
-        "category": "DC"
-    },
-    {
-        "id": 14,
-        "picture": "star-wars-kylo-ren.jpg",
-        "name": "Kylo Ren",
-        "price": 32.99,
-        "rating": 4.7,
-        "category": "Star Wars"
-    },
-    {
-        "id": 15,
         "picture": "transformers-megatron.jpg",
         "name": "Megatron",
-        "price": 33.99,
-        "rating": 4.6,
-        "category": "Transformers"
+        "sellerName": "Decepticon Emporium",
+        "sellerEmail": "decepticonemporium@example.com",
+        "category": "Transformers",
+        "price": 30.99,
+        "rating": 4.5,
+        "quantity": 7,
+        "description": "Unleash the power of the Decepticons with the mighty Megatron action figure. Conquer the Autobots and rule Cybertron!"
     },
     {
-        "id": 16,
-        "picture": "https://www.laughingplace.com/w/wp-content/uploads/2022/04/thor-gorr-king-valkyrie-and-more-hasbro-reveals-thor-love-and-thunder-marvel-legends-action-figures.jpeg",
+        "picture": "marvel-thor.jpg",
         "name": "Thor",
-        "price": 24.99,
-        "rating": 4.8,
-        "category": "Marvel"
+        "sellerName": "Norse Collectibles",
+        "sellerEmail": "norsecollectibles@example.com",
+        "category": "Marvel",
+        "price": 25.99,
+        "rating": 4.9,
+        "quantity": 8,
+        "description": "Harness the power of thunder with the mighty Thor action figure. Defend Asgard and the Nine Realms!"
     },
     {
-        "id": 17,
         "picture": "dc-joker.jpg",
         "name": "Joker",
+        "sellerName": "Gotham Collectibles",
+        "sellerEmail": "gothamcollectibles@example.com",
+        "category": "DC",
         "price": 21.99,
         "rating": 4.7,
-        "category": "DC"
+        "quantity": 9,
+        "description": "Embrace chaos with the notorious Joker action figure. Cause mayhem in Gotham City!"
     },
     {
-        "id": 18,
-        "picture": "star-wars-r2d2.jpg",
-        "name": "R2-D2",
-        "price": 30.99,
-        "rating": 4.9,
-        "category": "Star Wars"
+        "picture": "star-wars-han-solo.jpg",
+        "name": "Han Solo",
+        "sellerName": "Rebel Alliance Emporium",
+        "sellerEmail": "rebelallianceemporium@example.com",
+        "category": "Star Wars",
+        "price": 27.99,
+        "rating": 4.6,
+        "quantity": 5,
+        "description": "Join the Rebel Alliance with the resourceful Han Solo action figure. Pilot the Millennium Falcon and defeat the Empire!"
     },
     {
-        "id": 19,
         "picture": "transformers-starscream.jpg",
         "name": "Starscream",
-        "price": 29.99,
-        "rating": 4.5,
-        "category": "Transformers"
+        "sellerName": "Decepticon Armory",
+        "sellerEmail": "decepticonarmory@example.com",
+        "category": "Transformers",
+        "price": 32.99,
+        "rating": 4.4,
+        "quantity": 6,
+        "description": "Unleash the treacherous Starscream action figure and plot against Megatron for control of the Decepticons!"
     },
     {
-        "id": 20,
-        "picture": "https://cdn.shopify.com/s/files/1/1163/0056/products/black-widow_marvel_gallery_60ef2bd54fafb_535x.jpg?v=1626549611",
+        "picture": "marvel-black-widow.jpg",
         "name": "Black Widow",
+        "sellerName": "Spy Headquarters",
+        "sellerEmail": "spyheadquarters@example.com",
+        "category": "Marvel",
         "price": 23.99,
+        "rating": 4.5,
+        "quantity": 7,
+        "description": "Infiltrate the enemy with the deadly Black Widow action figure. Skilled in espionage and martial arts!"
+    },
+    {
+        "picture": "dc-aquaman.jpg",
+        "name": "Aquaman",
+        "sellerName": "Atlantean Treasures",
+        "sellerEmail": "atlanteantreasures@example.com",
+        "category": "DC",
+        "price": 26.99,
+        "rating": 4.8,
+        "quantity": 5,
+        "description": "Dive into adventure with the aquatic hero Aquaman action figure. Command the seas and protect Atlantis!"
+    },
+    {
+        "picture": "star-wars-luke-skywalker.jpg",
+        "name": "Luke Skywalker",
+        "sellerName": "Rebel Heroes",
+        "sellerEmail": "rebelheroes@example.com",
+        "category": "Star Wars",
+        "price": 29.99,
         "rating": 4.6,
-        "category": "Marvel"
+        "quantity": 8,
+        "description": "Join the Rebellion with the courageous Luke Skywalker action figure. Train in the ways of the Jedi and confront the Dark Side!"
+    },
+    {
+        "picture": "transformers-grimlock.jpg",
+        "name": "Grimlock",
+        "sellerName": "Dinobot Warriors",
+        "sellerEmail": "dinobotwarriors@example.com",
+        "category": "Transformers",
+        "price": 24.99,
+        "rating": 4.7,
+        "quantity": 6,
+        "description": "Unleash the ferocious power of the Dinobot leader Grimlock action figure. Rule the prehistoric world of Transformers!"
+    },
+    {
+        "picture": "marvel-hulk.jpg",
+        "name": "Hulk",
+        "sellerName": "Smash Emporium",
+        "sellerEmail": "smashemporium@example.com",
+        "category": "Marvel",
+        "price": 28.99,
+        "rating": 4.5,
+        "quantity": 9,
+        "description": "Unleash the incredible power of the Hulk action figure. Smash"
     }
 ]
