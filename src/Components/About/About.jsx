@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       <div className="sm:flex sm:flex-col md:relative">
-        <div className="text-7xl sm:text-center md:absolute md:top-28 md:left-4 text-[#263238]">
+        <div className="text-7xl sm:mb-6 sm:text-center md:absolute md:top-28 md:left-4 text-[#263238]">
           About us
         </div>
         <img

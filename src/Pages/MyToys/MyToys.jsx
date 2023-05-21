@@ -8,7 +8,7 @@ const MyToys = () => {
 
   const [myToys, setMyToys] = useState([]);
 
-  const url = `http://localhost:5000/myToys?email=${loggedUser.email}`;
+  const url = `https://venture-toy-verse-server.vercel.app/myToys?email=${loggedUser.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -22,7 +22,7 @@ const MyToys = () => {
   //console.log(loggedUser);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/myToys/${id}`, {
+    fetch(`https://venture-toy-verse-server.vercel.app/myToys/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",

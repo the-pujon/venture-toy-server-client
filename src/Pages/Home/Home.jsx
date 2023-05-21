@@ -29,17 +29,17 @@ const Home = () => {
       />
 
       <Header />
-      <div className="h-screen">
+      <div className="h-screen my-16 md:my-8">
         <About />
       </div>
-      <div className="flex justify-center items-center gap-3 sm:flex-col md:flex-row mx-3 h-screen ">
+      <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-3 sm:flex-col md:flex-row mx-3 mt-16 md:my-8 h-screen ">
         <div className="text-6xl">Our Toy Gallery</div>
         <Gallery1 />
       </div>
       <div>
         <Shop loadedToys={loadedToys} />
       </div>
-      <div className="h-96 flex justify-center items-center">
+      <div className="h-fit my-8 flex justify-center items-center">
         <WeProvide />
       </div>
     </div>

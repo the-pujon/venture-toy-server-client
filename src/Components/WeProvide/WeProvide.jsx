@@ -7,7 +7,7 @@ const WeProvide = () => {
   return (
     <div>
       <h1 className="text-center text-6xl mb-16">We Provide</h1>
-      <div className="flex justify-center gap-8">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8">
         <div className="flex flex-col justify-center items-center border-2 border-[#263238] p-8 rounded-lg text-2xl w-60 text-center">
           <FaShippingFast />
           <p>Fastest and safest Delivery</p>

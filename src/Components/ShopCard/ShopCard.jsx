@@ -33,8 +33,8 @@ const ShopCard = ({ toy }) => {
 
   return (
     <div>
-      <div className="card lg:card-side bg-base-100 h-64 shadow-xl">
-        <figure className=" w-1/2">
+      <div className="card card-side bg-base-100 h-64 shadow-xl">
+        <figure className=" w-1/2 ">
           <img src={toy.photoURL} alt="Album" className="" />
         </figure>
         <div className="card-body">

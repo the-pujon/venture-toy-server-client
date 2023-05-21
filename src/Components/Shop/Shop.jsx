@@ -33,7 +33,7 @@ const Shop = ({ loadedToys }) => {
         {["All", "Marvel", "DC", "Transformers", "Star Wars"].map(
           (category, index) => (
             <TabPanel key={index}>
-              <div className="grid gap-4 m-8 grid-cols-2">
+              <div className="grid gap-4 m-8 grid-cols-1 md:grid-cols-2">
                 {usedToy.map((toy) => (
                   <div key={toy._id}>
                     <ShopCard toy={toy} />

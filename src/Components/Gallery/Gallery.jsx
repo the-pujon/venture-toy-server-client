@@ -86,7 +86,7 @@ const Gallery1 = () => {
     },
   ];
   return (
-    <div className="h-96 overflow-y-scroll shadow-2xl flex-1">
+    <div className="h-96 overflow-y-scroll shadow-2xl md:flex-1 flex-none md:w-12">
       <Gallery images={images} enableImageSelection={false} />
     </div>
   );
