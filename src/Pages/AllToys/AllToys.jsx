@@ -47,14 +47,6 @@ export const AllToys = () => {
     setFilteredToys(toySearch);
   };
 
-  const handleShowMore = () => {
-    //setFilteredToys(allLoadedToys);
-    fetch(`http://localhost:5000/allToys?limit=${false}`)
-      .then((res) => res.json())
-      .then((data) => setFilteredToys(data))
-      .catch((err) => console.error(err));
-  };
-
   const handleClick = (id) => {
     console.log(id);
     //return <NavLink to={`/toys/${id}`}></NavLink>;

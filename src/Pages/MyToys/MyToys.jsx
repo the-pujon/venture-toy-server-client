@@ -111,13 +111,13 @@ const MyToys = () => {
 
       <div>
         <button
-          className="btn btn-primary me-4"
+          className="btn bg[#263238]   me-4"
           onClick={() => handleAscending(1)}
         >
           Ascending sort
         </button>
         <button
-          className="btn btn-primary"
+          className="btn bg[#263238]  "
           onClick={() => handleDescending(-1)}
         >
           Descending sort
