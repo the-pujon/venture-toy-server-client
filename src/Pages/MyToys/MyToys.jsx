@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 const MyToys = () => {
   const { loggedUser } = useContext(AuthContext);
@@ -11,7 +13,7 @@ const MyToys = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         setMyToys(data);
       })
       .catch((err) => console.error(err));
@@ -22,17 +24,46 @@ const MyToys = () => {
   const handleDelete = (id) => {
     fetch(`http://localhost:5000/myToys/${id}`, {
       method: "DELETE",
+      headers: {
+        "content-type": "application/json",
+      },
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
+        console.log("delete");
+        toast.success("Deleted Successfully", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         const remainingToys = myToys.filter((myToy) => myToy._id !== id);
         setMyToys(remainingToys);
+        console.log(remainingToys);
       })
       .catch((err) => console.error(err));
   };
 
   return (
     <div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+
       {/* Header */}
       <div
         className="hero h-48"
@@ -99,7 +130,13 @@ const MyToys = () => {
                   >
                     Delete
                   </button>
-                  <button className="btn bg-[#263238] btn-xs">Edit</button>
+                  <Link
+                    to={`/myToys/${myToy._id}`}
+                    className="btn bg-[#263238] btn-xs"
+                    state={{ myToy: myToy }}
+                  >
+                    Edit
+                  </Link>
                 </th>
               </tr>
             ))}

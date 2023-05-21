@@ -1,14 +1,30 @@
 import React from "react";
 
-import addToy from "../../assets/addToy.png";
+import update from "../../assets/update.png";
+import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 //import { Link } from "react-router-dom";
 
-const AddToy = () => {
+const UpdateToy = () => {
+  const myToy = useLocation()?.state?.myToy;
   const navigate = useNavigate();
 
-  const handleAddToy = (e) => {
+  const {
+    _id,
+    photoURL,
+    name,
+    sellerName,
+    sellerEmail,
+    price,
+    rating,
+    quantity,
+    subCategory,
+    description,
+  } = myToy;
+
+  console.log(myToy);
+
+  const handleUpdateToy = (e) => {
     e.preventDefault();
     //console.log("clicked");
     const form = e.target;
@@ -22,7 +38,7 @@ const AddToy = () => {
     const quantity = form.quantity.value;
     const description = form.description.value;
 
-    const addedToy = {
+    const updatedToy = {
       name,
       sellerName,
       sellerEmail,
@@ -34,17 +50,17 @@ const AddToy = () => {
       description,
     };
 
-    fetch("http://localhost:5000/toys", {
-      method: "POST",
+    fetch(`http://localhost:5000/myToys/${_id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(addedToy),
+      body: JSON.stringify(updatedToy),
     })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        toast.success("Added Successfully", {
+        toast.success("Updated Successfully", {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: false,
@@ -64,18 +80,18 @@ const AddToy = () => {
       <>
         <div className="hero min-h-screen bg-none ">
           <div className="hero-content flex-col lg:flex-row mx-8">
-            <img src={addToy} alt="" className="w-[35rem]   " />
+            <img src={update} alt="" className="w-[35rem]   " />
 
             <div className="card flex-1 w-[60rem]  shadow-2xl bg-transparent ">
               <div
                 className="text-6xl text-center mt-7"
                 style={{ color: "#263238" }}
               >
-                Add a toy
+                Update a toy
               </div>
               <form
                 className="card-body bg-transparent flex flex-col items-center"
-                onSubmit={handleAddToy}
+                onSubmit={handleUpdateToy}
               >
                 <div className="flex flex-row justify-around gap-4">
                   <div>
@@ -89,6 +105,7 @@ const AddToy = () => {
                         placeholder="name"
                         style={{ borderBottom: "2px solid #a8adaf" }}
                         required
+                        defaultValue={name}
                       />
                       <label
                         htmlFor="name"
@@ -107,6 +124,7 @@ const AddToy = () => {
                         placeholder="sellerName"
                         style={{ borderBottom: "2px solid #a8adaf" }}
                         required
+                        defaultValue={sellerName}
                       />
                       <label
                         htmlFor="sellerName"
@@ -125,6 +143,7 @@ const AddToy = () => {
                         placeholder="sellerEmail"
                         style={{ borderBottom: "2px solid #a8adaf" }}
                         required
+                        defaultValue={sellerEmail}
                       />
                       <label
                         htmlFor="sellerEmail"
@@ -144,6 +163,7 @@ const AddToy = () => {
                         placeholder="photoURL"
                         style={{ borderBottom: "2px solid #a8adaf" }}
                         required
+                        defaultValue={photoURL}
                       />
                       <label
                         htmlFor="photoURL"
@@ -164,6 +184,7 @@ const AddToy = () => {
                         placeholder="subCategory"
                         style={{ borderBottom: "2px solid #a8adaf" }}
                         required
+                        defaultValue={subCategory}
                       />
                       <label
                         htmlFor="subCategory"
@@ -182,6 +203,7 @@ const AddToy = () => {
                         placeholder="price"
                         style={{ borderBottom: "2px solid #a8adaf" }}
                         required
+                        defaultValue={price}
                       />
                       <label
                         htmlFor="price"
@@ -200,6 +222,7 @@ const AddToy = () => {
                         placeholder="rating"
                         style={{ borderBottom: "2px solid #a8adaf" }}
                         required
+                        defaultValue={rating}
                       />
                       <label
                         htmlFor="rating"
@@ -218,6 +241,7 @@ const AddToy = () => {
                         placeholder="quantity"
                         style={{ borderBottom: "2px solid #a8adaf" }}
                         required
+                        defaultValue={quantity}
                       />
                       <label
                         htmlFor="quantity"
@@ -238,6 +262,7 @@ const AddToy = () => {
                     placeholder="description"
                     style={{ borderBottom: "2px solid #a8adaf" }}
                     required
+                    defaultValue={description}
                   />
                   <label
                     htmlFor="description"
@@ -248,7 +273,7 @@ const AddToy = () => {
                 </div>
                 <div className="w-full mt-8">
                   <button type="submit" className="btn bg-[#263238] w-full">
-                    Add
+                    Update
                   </button>
                 </div>
               </form>
@@ -260,4 +285,4 @@ const AddToy = () => {
   );
 };
 
-export default AddToy;
+export default UpdateToy;

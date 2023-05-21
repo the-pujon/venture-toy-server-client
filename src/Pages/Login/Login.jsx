@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 
 import login1 from "../../assets/LoginPic/login2.png";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { loginWithEmail, loginWithGoogle, loginWithGithub } =
@@ -24,7 +25,16 @@ const Login = () => {
 
     loginWithEmail(email, password)
       .then((result) => {
-        console.log(result.user);
+        toast.success("Login Successful", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         navigate("/");
       })
       .catch((err) => console.error(err));
@@ -32,13 +42,37 @@ const Login = () => {
 
   const handleGoogleLogin = () => {
     loginWithGoogle()
-      .then((res) => console.log(res.user))
+      .then((res) => {
+        toast.success("Login Successful", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        navigate("/");
+      })
       .catch((err) => console.log(err));
   };
 
   const handleGithubLogin = () => {
     loginWithGithub()
-      .then((res) => console.log(res.user))
+      .then((res) => {
+        toast.success("Login Successful", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        navigate("/");
+      })
       .catch((err) => console.log(err));
   };
 

@@ -1,10 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import banner from "../../assets/Banner/banner3.jpg";
 import "./AllToys.scss";
+import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 export const AllToys = () => {
+  const { loggedUser } = useContext(AuthContext);
+
   const allLoadedToys = useLoaderData();
+
+  const navigate = useNavigate();
 
   const [filteredToys, setFilteredToys] = useState(allLoadedToys);
   const [search, setSearch] = useState("");
@@ -41,6 +47,29 @@ export const AllToys = () => {
 
   const handleShowMore = () => {
     setFilteredToys(allLoadedToys);
+  };
+
+  const handleClick = (id) => {
+    console.log(id);
+    //return <NavLink to={`/toys/${id}`}></NavLink>;
+    if (!loggedUser) {
+      toast.warning("You have to log in first to view details", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+
+      setTimeout(() => {
+        navigate(`/login`);
+      }, 2000);
+    } else {
+      navigate(`/toys/${id}`);
+    }
   };
 
   return (
@@ -118,7 +147,10 @@ export const AllToys = () => {
                 <td>${loadedToy.price}</td>
                 <td>{loadedToy.quantity}</td>
                 <td>
-                  <button className="btn bg[#263238] btn-xs">
+                  <button
+                    onClick={() => handleClick(loadedToy._id)}
+                    className="btn bg-[#263238] btn-xs"
+                  >
                     View Details
                   </button>
                 </td>

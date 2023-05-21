@@ -6,6 +6,7 @@ import Shop from "../../Components/Shop/Shop";
 import { useLoaderData } from "react-router-dom";
 import About from "../../Components/About/About";
 import WeProvide from "../../Components/WeProvide/WeProvide";
+import { ToastContainer, toast } from "react-toastify";
 
 const Home = () => {
   const loadedToys = useLoaderData();
@@ -14,6 +15,19 @@ const Home = () => {
 
   return (
     <div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+
       <Header />
       <div className="h-screen">
         <About />
