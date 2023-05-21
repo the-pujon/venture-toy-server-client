@@ -19,15 +19,19 @@ const About = () => {
 
         <div
           data-aos="fade-right"
-          className="md:absolute md:w-2/6 p-8  md:h-96 md:z-20 md:top-60 md:left-36 md:backdrop-blur-sm md:rounded-md bg-[#a8adafd7] flex justify-center items-center"
+          className="md:absolute md:w-2/6 p-8  md:h-fit md:z-20 md:top-60 md:left-36 md:backdrop-blur-sm md:rounded-md bg-[#a8adafd7] flex justify-center items-center"
         >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis
-          mollitia magnam, ratione cum commodi dignissimos iure pariatur
-          inventore doloribus id ut vel quibusdam aut dolorum necessitatibus
-          nemo? Alias aliquid modi rem non, dolores corrupti blanditiis
-          voluptatem sapiente eaque velit voluptatibus. Doloribus, molestiae
-          laborum. Tenetur tempora placeat molestiae, distinctio maiores
-          asperiores.
+          Welcome to Venture Toy Verse, the ultimate destination for toy
+          enthusiasts and collectors. Our e-commerce website is a haven for
+          adventure seekers, offering an unparalleled collection of toys from
+          various genres and universes. Step into a world of limitless
+          possibilities as you explore our vast catalog, featuring action
+          figures, board games, collectibles, and more. Immerse yourself in the
+          thrilling narratives of iconic franchises, from epic superhero sagas
+          to fantastical realms and galactic battles. With stunning visuals,
+          detailed descriptions, and customer ratings, Venture Toy Verse is your
+          gateway to endless fun and excitement. Unleash your imagination and
+          embark on unforgettable adventures with Venture Toy Verse.
         </div>
       </div>
     </div>

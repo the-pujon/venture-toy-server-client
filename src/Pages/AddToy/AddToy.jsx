@@ -12,7 +12,8 @@ const AddToy = () => {
 
   const handleAddToy = (e) => {
     e.preventDefault();
-    //console.log("clicked");
+
+    //getting all data
     const form = e.target;
     const name = form.name.value;
     const sellerName = form.sellerName.value;
@@ -36,7 +37,8 @@ const AddToy = () => {
       description,
     };
 
-    fetch("http://localhost:5000/toys", {
+    //sending all data
+    fetch("https://venture-toy-verse-server.vercel.app/toys", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -81,6 +83,7 @@ const AddToy = () => {
               >
                 <div className="flex flex-row justify-around gap-4">
                   <div>
+                    {/* name */}
                     <div className="form-control relative ">
                       <input
                         autoComplete="off"
@@ -99,6 +102,7 @@ const AddToy = () => {
                         Name
                       </label>
                     </div>
+                    {/* seller name */}
                     <div className="form-control relative my-5">
                       <input
                         autoComplete="off"
@@ -117,6 +121,7 @@ const AddToy = () => {
                         Seller Name
                       </label>
                     </div>
+                    {/*seller email*/}
                     <div className="form-control relative ">
                       <input
                         autoComplete="off"
@@ -135,7 +140,7 @@ const AddToy = () => {
                         Seller Email
                       </label>
                     </div>
-
+                    {/* photoURL */}
                     <div className="form-control relative mt-5">
                       <input
                         autoComplete="off"
@@ -155,7 +160,9 @@ const AddToy = () => {
                       </label>
                     </div>
                   </div>
+
                   <div>
+                    {/* subCategory */}
                     <div className="form-control relative">
                       <input
                         autoComplete="off"
@@ -174,6 +181,8 @@ const AddToy = () => {
                         Sub-Category
                       </label>
                     </div>
+
+                    {/* price */}
                     <div className="form-control relative my-5">
                       <input
                         autoComplete="off"
@@ -192,6 +201,7 @@ const AddToy = () => {
                         Price
                       </label>
                     </div>
+                    {/* rating */}
                     <div className="form-control relative ">
                       <input
                         autoComplete="off"
@@ -210,6 +220,7 @@ const AddToy = () => {
                         Rating
                       </label>
                     </div>
+                    {/* quantity */}
                     <div className="form-control relative mt-5">
                       <input
                         autoComplete="off"
@@ -230,6 +241,7 @@ const AddToy = () => {
                     </div>
                   </div>
                 </div>
+                {/* description */}
                 <div className="form-control relative mt-3">
                   <input
                     autoComplete="off"

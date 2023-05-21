@@ -21,10 +21,12 @@ export const AllToys = () => {
   //const shortListedToy = allLoadedToys.slice(0, 20);
   //setFilteredToys(shortListedToy);
 
+  //for search
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
 
+  //for search
   useEffect(() => {
     let value = search.toLowerCase();
     let toySearch = loadedToys.filter((data) => {
@@ -34,6 +36,7 @@ export const AllToys = () => {
     setFilteredToys(toySearch);
   }, [search]);
 
+  //for search
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -47,14 +50,16 @@ export const AllToys = () => {
     setFilteredToys(toySearch);
   };
 
+  //for show more
   const handleShowMore = () => {
     //setFilteredToys(allLoadedToys);
-    fetch(`http://localhost:5000/allToys?limit=${false}`)
+    fetch(`https://venture-toy-verse-server.vercel.app/allToys?limit=${false}`)
       .then((res) => res.json())
       .then((data) => setFilteredToys(data))
       .catch((err) => console.error(err));
   };
 
+  //for view details
   const handleClick = (id) => {
     console.log(id);
     //return <NavLink to={`/toys/${id}`}></NavLink>;
@@ -80,6 +85,7 @@ export const AllToys = () => {
 
   return (
     <div>
+      {/* toast */}
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -131,11 +137,6 @@ export const AllToys = () => {
           {/* head */}
           <thead>
             <tr>
-              {/*<th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>*/}
               <th>Seller</th>
               <th>Toy Name</th>
               <th>Sub Category</th>
@@ -145,15 +146,8 @@ export const AllToys = () => {
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
-
             {filteredToys.map((loadedToy) => (
               <tr key={loadedToy._id}>
-                {/*<th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>*/}
                 <td>
                   <div className="flex items-center space-x-3">
                     <div className="font-bold">
@@ -175,16 +169,10 @@ export const AllToys = () => {
                 </td>
               </tr>
             ))}
-
-            {/* row 2 */}
-
-            {/* row 3 */}
-
-            {/* row 4 */}
           </tbody>
-          {/* foot */}
         </table>
 
+        {/* show more */}
         {filteredToys.length <= 20 && (
           <div className="flex justify-center my-8">
             <button className="btn bg[#263238]  " onClick={handleShowMore}>

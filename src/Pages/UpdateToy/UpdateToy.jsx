@@ -41,6 +41,7 @@ const UpdateToy = () => {
     const quantity = form.quantity.value;
     const description = form.description.value;
 
+    //getting data
     const updatedToy = {
       name,
       sellerName,
@@ -53,7 +54,8 @@ const UpdateToy = () => {
       description,
     };
 
-    fetch(`http://localhost:5000/myToys/${_id}`, {
+    //Updating data
+    fetch(`https://venture-toy-verse-server.vercel.app/myToys/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

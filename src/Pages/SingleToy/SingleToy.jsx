@@ -6,6 +6,7 @@ const SingleToy = () => {
   useTitle("Toy Details");
   const singleLoadedToy = useLoaderData();
 
+  //destructuring
   const {
     photoURL,
     name,

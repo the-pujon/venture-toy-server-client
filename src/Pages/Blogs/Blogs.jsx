@@ -4,14 +4,14 @@ import useTitle from "../../Hook/useTitle";
 const Blogs = () => {
   useTitle("Blogs");
   return (
-    <div>
+    <div className="pt-20  ">
       {/* 1st question */}
       <div>
         <div className="text-xl font-semibold">
           What is an access token and refresh token? How do they work and where
           should we store them on the client-side?
         </div>
-        <div className="ml-4">
+        <div className="ml-8">
           An access token is a short-time token that provides temporary access
           to a database or server. On the other hand a refresh token is a
           long-lasting token that used to obtain new access tokens without user
@@ -34,7 +34,7 @@ const Blogs = () => {
         <div className="text-xl font-semibold">
           Compare SQL and NoSQL databases?
         </div>
-        <div className="ml-4">
+        <div className="ml-8">
           <table>
             <thead>
               <tr>
@@ -78,7 +78,7 @@ const Blogs = () => {
             <div className="text-xl font-semibold">
               What is express js? What is Nest JS?
             </div>
-            <div className="ml-4">
+            <div className="ml-8">
               Express.js is a popular web application framework for Node.js. It
               used for building APIs and server
               <br />
@@ -96,7 +96,7 @@ const Blogs = () => {
               <div className="text-xl font-semibold">
                 What is MongoDB aggregate and how does it work?
               </div>
-              <div className="ml-4">
+              <div className="ml-8">
                 MongoDB aggregation is a operations that process data records
                 and return computed results. It collects values from various
                 documents and groups them together and then performs different

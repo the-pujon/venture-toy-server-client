@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
 
@@ -10,7 +10,7 @@ const ShopCard = ({ toy }) => {
 
   const handleClick = (id) => {
     console.log(id);
-    //return <NavLink to={`/toys/${id}`}></NavLink>;
+
     if (!loggedUser) {
       toast.warning("You have to log in first to view details", {
         position: "top-right",

@@ -17,6 +17,7 @@ const Registration = () => {
 
   const navigate = useNavigate();
 
+  //registration by email
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -52,6 +53,7 @@ const Registration = () => {
       .catch((err) => console.error(err));
   };
 
+  //registration by google
   const handleGoogleLogin = () => {
     loginWithGoogle()
       .then((res) => {
@@ -70,6 +72,7 @@ const Registration = () => {
       .catch((err) => console.log(err));
   };
 
+  //registration by github
   const handleGithubLogin = () => {
     loginWithGithub()
       .then((res) => {

@@ -17,12 +17,9 @@ const Home = () => {
 
   useTitle("Home");
 
-  console.log(window.document.title);
-
-  //console.log(toys);
-
   return (
     <div>
+      {/* For Toaster */}
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -36,10 +33,15 @@ const Home = () => {
         theme="light"
       />
 
+      {/* Header */}
       <Header />
+
+      {/* About */}
       <div className="h-screen my-16 md:my-8">
         <About />
       </div>
+
+      {/* Gallery */}
       <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-3 sm:flex-col md:flex-row mx-3 mt-16 md:my-8 h-screen ">
         <div className="text-6xl" data-aos="fade-right">
           Our Toy Gallery
@@ -47,6 +49,8 @@ const Home = () => {
 
         <Gallery1 />
       </div>
+
+      {/* Shop by Category */}
       <div>
         <Shop loadedToys={loadedToys} />
       </div>

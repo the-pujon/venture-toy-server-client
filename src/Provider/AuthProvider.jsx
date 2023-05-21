@@ -19,34 +19,40 @@ const AuthProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
 
+  //registration
   const registrationWithEmail = (email, password) => {
     setLoading(true);
 
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  //login with email
   const loginWithEmail = (email, password) => {
     setLoading(true);
 
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  //login with google
   const loginWithGoogle = () => {
     setLoading(true);
 
     return signInWithPopup(auth, googleProvider);
   };
 
+  //login with github
   const loginWithGithub = () => {
     setLoading(true);
 
     return signInWithPopup(auth, githubProvider);
   };
 
+  //logout
   const logOut = () => {
     return signOut(auth);
   };
 
+  //onState
   useEffect(() => {
     const unSub = onAuthStateChanged(auth, (currentUser) => {
       setLoggedUser(currentUser);

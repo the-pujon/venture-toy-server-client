@@ -8,6 +8,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
   const { loggedUser, logOut } = useContext(AuthContext);
 
+  //logout
   const handleLogOut = () => {
     logOut()
       .then(() => console.log("log out"))
@@ -46,7 +47,7 @@ const Navbar = () => {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/toys">All Toys</NavLink>
+                <NavLink to="/allToys">All Toys</NavLink>
               </li>
               {loggedUser && (
                 <li>
@@ -78,7 +79,7 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/toys">All Toys</NavLink>
+              <NavLink to="/allToys">All Toys</NavLink>
             </li>
             {loggedUser && (
               <li>
@@ -121,7 +122,7 @@ const Navbar = () => {
           </div>*/}
           {!loggedUser && (
             <Link to="/login">
-              <button className="btn border-white btn-outline  btn-sm text-white hover:border-amber-600 hover:bg-transparent">
+              <button className="btn border-white btn-outline  btn-sm text-white hover:border-[#263238] hover:bg-transparent">
                 Login
               </button>
             </Link>

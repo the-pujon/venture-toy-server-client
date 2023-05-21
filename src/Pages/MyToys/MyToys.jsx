@@ -16,21 +16,20 @@ const MyToys = () => {
   const [myToys, setMyToys] = useState([]);
   const [sort, setSort] = useState(1);
 
-  const url = `http://localhost:5000/myToys?email=${loggedUser.email}&sortBy=${sort}`;
+  //gor getting data based on userEmail
+  const url = `https://venture-toy-verse-server.vercel.app/myToys?email=${loggedUser.email}&sortBy=${sort}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        //console.log(data);
         setMyToys(data);
       })
       .catch((err) => console.error(err));
   }, []);
 
-  //console.log(loggedUser);
-
+  //for delete
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/myToys/${id}`, {
+    fetch(`https://venture-toy-verse-server.vercel.app/myToys/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
@@ -57,9 +56,10 @@ const MyToys = () => {
       .catch((err) => console.error(err));
   };
 
+  //for ascending data sort
   const handleAscending = (sort) => {
     setSort(sort);
-    const URL = `http://localhost:5000/myToys?email=${loggedUser.email}&sortBy=${sort}`;
+    const URL = `https://venture-toy-verse-server.vercel.app/myToys?email=${loggedUser.email}&sortBy=${sort}`;
     fetch(URL)
       .then((res) => res.json())
       .then((data) => {
@@ -68,9 +68,10 @@ const MyToys = () => {
       .catch((err) => console.error(err));
   };
 
+  //for descending data sort
   const handleDescending = (sort) => {
     setSort(sort);
-    const URL = `http://localhost:5000/myToys?email=${loggedUser.email}&sortBy=${sort}`;
+    const URL = `https://venture-toy-verse-server.vercel.app/myToys?email=${loggedUser.email}&sortBy=${sort}`;
     fetch(URL)
       .then((res) => res.json())
       .then((data) => {
@@ -81,6 +82,7 @@ const MyToys = () => {
 
   return (
     <div>
+      {/* toast */}
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -109,15 +111,17 @@ const MyToys = () => {
         </div>
       </div>
 
-      <div>
+      <div className="flex justify-center items-center m-4">
+        {/* ascending */}
         <button
-          className="btn bg[#263238]   me-4"
+          className="btn bg-[#263238]   me-4"
           onClick={() => handleAscending(1)}
         >
           Ascending sort
         </button>
+        {/* descending */}
         <button
-          className="btn bg[#263238]  "
+          className="btn bg-[#263238]  "
           onClick={() => handleDescending(-1)}
         >
           Descending sort

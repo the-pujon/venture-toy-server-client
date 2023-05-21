@@ -15,6 +15,11 @@ const Login = () => {
     useContext(AuthContext);
   useTitle("Login");
 
+  const location = useLocation();
+  console.log(location);
+
+  const [error, setError] = useState(false);
+
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
@@ -25,6 +30,7 @@ const Login = () => {
     const email = form.email.value;
     const password = form.email.value;
 
+    //login with email
     loginWithEmail(email, password)
       .then((result) => {
         toast.success("Login Successful", {
@@ -39,9 +45,13 @@ const Login = () => {
         });
         navigate("/");
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error(err);
+        setError(true);
+      });
   };
 
+  //login With google
   const handleGoogleLogin = () => {
     loginWithGoogle()
       .then((res) => {
@@ -57,9 +67,13 @@ const Login = () => {
         });
         navigate("/");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setError(true);
+      });
   };
 
+  //login with github
   const handleGithubLogin = () => {
     loginWithGithub()
       .then((res) => {
@@ -75,7 +89,10 @@ const Login = () => {
         });
         navigate("/");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setError(true);
+      });
   };
 
   return (
@@ -134,7 +151,9 @@ const Login = () => {
                   Register
                 </Link>
               </div>
-              {/*{error && <div className="text-xs text-warning">{error}</div>}*/}
+              {error && (
+                <div className="text-xs text-warning">There is an error</div>
+              )}
               <div className="form-control mt-6">
                 <button
                   type="submit"

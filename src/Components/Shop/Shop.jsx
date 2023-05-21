@@ -13,19 +13,15 @@ const Shop = ({ loadedToys }) => {
   const [toys, setToys] = useState(loadedToys);
 
   const handleSelect = (categoryName) => {
-    if (categoryName === "All") {
-      setUsedToy(toys);
-      console.log(usedToy);
-    } else {
-      setUsedToy(toys.filter((toy) => toy.subCategory === categoryName));
-    }
+    setUsedToy(toys.filter((toy) => toy.subCategory === categoryName));
   };
 
   return (
     <div>
       <Tabs>
         <TabList>
-          {["All", "Marvel", "DC", "Transformers", "Star Wars"].map(
+          {/* categories */}
+          {["Marvel", "DC", "Transformers", "Star Wars"].map(
             (category, index) => (
               <Tab key={index} onClick={() => handleSelect(category)}>
                 {category}
@@ -34,9 +30,11 @@ const Shop = ({ loadedToys }) => {
           )}
         </TabList>
 
-        {["All", "Marvel", "DC", "Transformers", "Star Wars"].map(
+        {/* Showing cards by category */}
+        {["Marvel", "DC", "Transformers", "Star Wars"].map(
           (category, index) => (
             <TabPanel key={index}>
+              {/* Showing all card */}
               <div className="grid gap-4 m-8 grid-cols-1 md:grid-cols-2">
                 {usedToy.map((toy) => (
                   <div key={toy._id} data-aos="flip-left">
