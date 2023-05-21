@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ShopCard = ({ toy }) => {
   return (
@@ -12,7 +13,9 @@ const ShopCard = ({ toy }) => {
           <div>Price: ${toy.price}</div>
           <div>Rating:{toy.rating}</div>
           <div className="card-actions justify-end">
-            <button className="btn bg-[#263238]">View Details</button>
+            <Link to={`/toys/${toy._id}`} className="btn bg-[#263238]">
+              View Details
+            </Link>
           </div>
         </div>
       </div>
