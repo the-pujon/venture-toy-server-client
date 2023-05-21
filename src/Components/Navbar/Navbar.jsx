@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.scss";
+import logo from "../../assets/logo.png";
 
 import { AuthContext } from "../../Provider/AuthProvider";
 
@@ -15,7 +16,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar bg-black/20 text-white fixed z-40 ">
+      <div className="navbar bg-black/20 text-white fixed z-40 backdrop-blur-sm">
         <div className="navbar-start">
           {/* Icon for nav in mobile */}
           <div className="dropdown">
@@ -64,8 +65,10 @@ const Navbar = () => {
             </ul>
           </div>
           {/* There Will be website logo */}
-          {/*<img src={logo} alt="" className="w-32" />*/}
-          <div>Venture Toy Verse</div>
+          <img src={logo} alt="" className="w-16" />
+          <div className="text-xs md:text-xl font-semibold -ms-1 mt-3">
+            Venture Toy Verse
+          </div>
         </div>
 
         {/* desktop screen nav menu */}
@@ -94,7 +97,7 @@ const Navbar = () => {
         </div>
 
         {/* Avatar dropdown menu */}
-        <div className="navbar-end me-16 md:me-0">
+        <div className="navbar-end  md:me-0">
           {/*<Link to="/login">
             <button className="btn border-white btn-outline  btn-sm text-white hover:border-amber-600 hover:bg-transparent">
               Login
