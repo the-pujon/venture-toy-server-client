@@ -4,6 +4,10 @@ import "react-tabs/style/react-tabs.css";
 import ShopCard from "../ShopCard/ShopCard";
 import "./Shop.scss";
 
+import AOS from "aos";
+
+AOS.init();
+
 const Shop = ({ loadedToys }) => {
   const [usedToy, setUsedToy] = useState(loadedToys);
   const [toys, setToys] = useState(loadedToys);
@@ -35,7 +39,7 @@ const Shop = ({ loadedToys }) => {
             <TabPanel key={index}>
               <div className="grid gap-4 m-8 grid-cols-1 md:grid-cols-2">
                 {usedToy.map((toy) => (
-                  <div key={toy._id}>
+                  <div key={toy._id} data-aos="flip-left">
                     <ShopCard toy={toy} />
                   </div>
                 ))}

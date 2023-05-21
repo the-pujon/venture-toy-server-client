@@ -9,6 +9,7 @@ import signup1 from "../../assets/LoginPic/signup1.png";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { auth } from "../../Firebase/firebase.init";
+import { toast } from "react-toastify";
 
 const Registration = () => {
   const { registrationWithEmail, loginWithGoogle, loginWithGithub } =
@@ -34,7 +35,16 @@ const Registration = () => {
           photoURL: photoURL,
         })
           .then((res) => {
-            console.log("updated");
+            toast.success("Registration Successful", {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
             navigate("/");
           })
           .catch((err) => console.error(err));
@@ -44,13 +54,37 @@ const Registration = () => {
 
   const handleGoogleLogin = () => {
     loginWithGoogle()
-      .then((res) => console.log(res.user))
+      .then((res) => {
+        toast.success("Registration Successful", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        navigate("/");
+      })
       .catch((err) => console.log(err));
   };
 
   const handleGithubLogin = () => {
     loginWithGithub()
-      .then((res) => console.log(res.user))
+      .then((res) => {
+        toast.success("Registration Successful", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        navigate("/");
+      })
       .catch((err) => console.log(err));
   };
 
@@ -163,7 +197,7 @@ const Registration = () => {
                 <div
                   className="btn btn-circle  "
                   style={{ background: "#263238" }}
-                  //onClick={handleGithubLogin}
+                  onClick={handleGithubLogin}
                 >
                   <FaGithub className="text-3xl" />
                 </div>

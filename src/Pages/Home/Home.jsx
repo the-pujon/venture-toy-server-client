@@ -8,6 +8,9 @@ import About from "../../Components/About/About";
 import WeProvide from "../../Components/WeProvide/WeProvide";
 import { ToastContainer, toast } from "react-toastify";
 import useTitle from "../../Hook/useTitle";
+import AOS from "aos";
+
+AOS.init();
 
 const Home = () => {
   const loadedToys = useLoaderData();
@@ -38,7 +41,10 @@ const Home = () => {
         <About />
       </div>
       <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-3 sm:flex-col md:flex-row mx-3 mt-16 md:my-8 h-screen ">
-        <div className="text-6xl">Our Toy Gallery</div>
+        <div className="text-6xl" data-aos="fade-right">
+          Our Toy Gallery
+        </div>
+
         <Gallery1 />
       </div>
       <div>

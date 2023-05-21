@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import useTitle from "../../Hook/useTitle";
 
+import banner from "../../assets/Banner/banner3.jpg";
+
 const MyToys = () => {
   const { loggedUser } = useContext(AuthContext);
 
@@ -12,8 +14,9 @@ const MyToys = () => {
   useTitle("My Toys");
 
   const [myToys, setMyToys] = useState([]);
+  const [sort, setSort] = useState(1);
 
-  const url = `https://venture-toy-verse-server.vercel.app/myToys?email=${loggedUser.email}`;
+  const url = `http://localhost:5000/myToys?email=${loggedUser.email}&sortBy=${sort}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -27,7 +30,7 @@ const MyToys = () => {
   //console.log(loggedUser);
 
   const handleDelete = (id) => {
-    fetch(`https://venture-toy-verse-server.vercel.app/myToys/${id}`, {
+    fetch(`http://localhost:5000/myToys/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
@@ -54,6 +57,28 @@ const MyToys = () => {
       .catch((err) => console.error(err));
   };
 
+  const handleAscending = (sort) => {
+    setSort(sort);
+    const URL = `http://localhost:5000/myToys?email=${loggedUser.email}&sortBy=${sort}`;
+    fetch(URL)
+      .then((res) => res.json())
+      .then((data) => {
+        setMyToys(data);
+      })
+      .catch((err) => console.error(err));
+  };
+
+  const handleDescending = (sort) => {
+    setSort(sort);
+    const URL = `http://localhost:5000/myToys?email=${loggedUser.email}&sortBy=${sort}`;
+    fetch(URL)
+      .then((res) => res.json())
+      .then((data) => {
+        setMyToys(data);
+      })
+      .catch((err) => console.error(err));
+  };
+
   return (
     <div>
       <ToastContainer
@@ -73,15 +98,30 @@ const MyToys = () => {
       <div
         className="hero h-48"
         style={{
-          backgroundImage: `url("/images/stock/photo-1507358522600-9f71e620c44e.jpg")`,
+          backgroundImage: `url(${banner})`,
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+            <h1 className="mb-5 text-5xl font-bold">My Toy</h1>
           </div>
         </div>
+      </div>
+
+      <div>
+        <button
+          className="btn btn-primary me-4"
+          onClick={() => handleAscending(1)}
+        >
+          Ascending sort
+        </button>
+        <button
+          className="btn btn-primary"
+          onClick={() => handleDescending(-1)}
+        >
+          Descending sort
+        </button>
       </div>
 
       {/* table */}
@@ -121,13 +161,11 @@ const MyToys = () => {
                 <td>{myToy.name}</td>
                 <td>{myToy.sellerName}</td>
                 <td>{myToy.sellerEmail}</td>
-                <td className="w-28 overflow-x-auto">
-                  <div className="">{myToy.description}</div>
-                </td>
                 <td>{myToy.subCategory}</td>
                 <td>{myToy.price}</td>
                 <td>{myToy.rating}</td>
                 <td>{myToy.quantity}</td>
+                <td>{myToy.description.slice(0, 20)}...</td>
                 <th>
                   <button
                     className="btn bg-[#263238] me-2 btn-xs"

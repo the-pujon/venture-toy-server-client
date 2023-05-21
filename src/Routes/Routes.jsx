@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("https://venture-toy-verse-server.vercel.app/toys"),
+        loader: () => fetch("http://localhost:5000/toys"),
       },
       {
         path: "blogs",
@@ -35,14 +35,12 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://venture-toy-verse-server.vercel.app/toys/${params.id}`
-          ),
+          fetch(`http://localhost:5000/toys/${params.id}`),
       },
       {
         path: "toys",
         element: <AllToys />,
-        loader: () => fetch("https://venture-toy-verse-server.vercel.app/toys"),
+        loader: () => fetch("http://localhost:5000/toys"),
       },
       {
         path: "myToys",

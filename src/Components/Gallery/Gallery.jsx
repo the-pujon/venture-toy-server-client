@@ -6,6 +6,10 @@ import banner1 from "../../assets/Banner/banner1.jpg";
 import banner2 from "../../assets/Banner/banner2.jpg";
 import banner3 from "../../assets/Banner/banner3.jpg";
 
+import AOS from "aos";
+
+AOS.init();
+
 const Gallery1 = () => {
   const images = [
     {
@@ -86,7 +90,10 @@ const Gallery1 = () => {
     },
   ];
   return (
-    <div className="h-96 overflow-y-scroll shadow-2xl md:flex-1 flex-none md:w-12">
+    <div
+      data-aos="fade-left"
+      className="h-96 overflow-y-scroll shadow-2xl md:flex-1 flex-none md:w-12"
+    >
       <Gallery images={images} enableImageSelection={false} />
     </div>
   );

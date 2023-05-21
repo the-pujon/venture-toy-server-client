@@ -8,6 +8,7 @@ import useTitle from "../../Hook/useTitle";
 
 export const AllToys = () => {
   useTitle("All Toys");
+
   const { loggedUser } = useContext(AuthContext);
 
   const allLoadedToys = useLoaderData();

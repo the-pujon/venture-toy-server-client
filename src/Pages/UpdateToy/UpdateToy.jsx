@@ -53,7 +53,7 @@ const UpdateToy = () => {
       description,
     };
 
-    fetch(`https://venture-toy-verse-server.vercel.app/myToys/${_id}`, {
+    fetch(`http://localhost:5000/myToys/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
