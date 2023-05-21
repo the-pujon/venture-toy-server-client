@@ -2,9 +2,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import useTitle from "../../Hook/useTitle";
 
 const MyToys = () => {
   const { loggedUser } = useContext(AuthContext);
+
+  useTitle("Registration");
+
+  useTitle("My Toys");
 
   const [myToys, setMyToys] = useState([]);
 

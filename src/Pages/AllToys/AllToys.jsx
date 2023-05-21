@@ -4,8 +4,10 @@ import banner from "../../assets/Banner/banner3.jpg";
 import "./AllToys.scss";
 import { ToastContainer, toast } from "react-toastify";
 import { AuthContext } from "../../Provider/AuthProvider";
+import useTitle from "../../Hook/useTitle";
 
 export const AllToys = () => {
+  useTitle("All Toys");
   const { loggedUser } = useContext(AuthContext);
 
   const allLoadedToys = useLoaderData();

@@ -3,8 +3,10 @@ import React from "react";
 import errorPage1 from "../../assets/404page.png";
 
 import { Link } from "react-router-dom";
+import useTitle from "../../Hook/useTitle";
 
 const ErrorPage = () => {
+  useTitle("Error");
   return (
     <div>
       <div

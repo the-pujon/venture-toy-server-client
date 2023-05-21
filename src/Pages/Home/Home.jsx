@@ -7,9 +7,14 @@ import { useLoaderData } from "react-router-dom";
 import About from "../../Components/About/About";
 import WeProvide from "../../Components/WeProvide/WeProvide";
 import { ToastContainer, toast } from "react-toastify";
+import useTitle from "../../Hook/useTitle";
 
 const Home = () => {
   const loadedToys = useLoaderData();
+
+  useTitle("Home");
+
+  console.log(window.document.title);
 
   //console.log(toys);
 

@@ -3,9 +3,12 @@ import React from "react";
 import update from "../../assets/update.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import useTitle from "../../Hook/useTitle";
 //import { Link } from "react-router-dom";
 
 const UpdateToy = () => {
+  useTitle("Update Toy");
+
   const myToy = useLocation()?.state?.myToy;
   const navigate = useNavigate();
 

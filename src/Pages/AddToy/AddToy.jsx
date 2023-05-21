@@ -3,9 +3,11 @@ import React from "react";
 import addToy from "../../assets/addToy.png";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import useTitle from "../../Hook/useTitle";
 //import { Link } from "react-router-dom";
 
 const AddToy = () => {
+  useTitle("Add Toy");
   const navigate = useNavigate();
 
   const handleAddToy = (e) => {

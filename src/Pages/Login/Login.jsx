@@ -8,10 +8,12 @@ import { FaGithub } from "react-icons/fa";
 import login1 from "../../assets/LoginPic/login2.png";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
+import useTitle from "../../Hook/useTitle";
 
 const Login = () => {
   const { loginWithEmail, loginWithGoogle, loginWithGithub } =
     useContext(AuthContext);
+  useTitle("Login");
 
   const navigate = useNavigate();
 
