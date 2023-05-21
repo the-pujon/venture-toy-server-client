@@ -5,14 +5,19 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+console.log(import.meta.env.VITE_APIKEY);
+
 const firebaseConfig = {
-  apiKey: "AIzaSyC7FllpDUQG9oXyD0G7mopWT46JvhutmrM",
-  authDomain: "venture-toy-verse.firebaseapp.com",
-  projectId: "venture-toy-verse",
-  storageBucket: "venture-toy-verse.appspot.com",
-  messagingSenderId: "725890471732",
-  appId: "1:725890471732:web:5c3f485244fa4ce3f13761",
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
+
+console.log(firebaseConfig);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
