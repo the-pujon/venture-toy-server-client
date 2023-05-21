@@ -14,13 +14,12 @@ export const AllToys = () => {
   const allLoadedToys = useLoaderData();
 
   const navigate = useNavigate();
-
+  const [loadedToys, setLoadedToys] = useState(allLoadedToys);
   const [filteredToys, setFilteredToys] = useState(allLoadedToys);
   const [search, setSearch] = useState("");
 
-  const shortListedToy = allLoadedToys.slice(0, 20);
+  //const shortListedToy = allLoadedToys.slice(0, 20);
   //setFilteredToys(shortListedToy);
-  const [loadedToys, setLoadedToys] = useState(shortListedToy);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -49,7 +48,11 @@ export const AllToys = () => {
   };
 
   const handleShowMore = () => {
-    setFilteredToys(allLoadedToys);
+    //setFilteredToys(allLoadedToys);
+    fetch(`http://localhost:5000/allToys?limit=${false}`)
+      .then((res) => res.json())
+      .then((data) => setFilteredToys(data))
+      .catch((err) => console.error(err));
   };
 
   const handleClick = (id) => {
@@ -181,12 +184,13 @@ export const AllToys = () => {
           </tbody>
           {/* foot */}
         </table>
-        {allLoadedToys.length > 20 ? (
-          <button className="btn bg[#263238]  " onClick={handleShowMore}>
-            Show more
-          </button>
-        ) : (
-          ""
+
+        {filteredToys.length <= 20 && (
+          <div className="flex justify-center my-8">
+            <button className="btn bg[#263238]  " onClick={handleShowMore}>
+              Show more
+            </button>
+          </div>
         )}
       </div>
     </div>

@@ -38,9 +38,9 @@ export const router = createBrowserRouter([
           fetch(`http://localhost:5000/toys/${params.id}`),
       },
       {
-        path: "toys",
+        path: "allToys",
         element: <AllToys />,
-        loader: () => fetch("http://localhost:5000/toys"),
+        loader: () => fetch("http://localhost:5000/allToys"),
       },
       {
         path: "myToys",

@@ -25,7 +25,7 @@ const MyToys = () => {
         setMyToys(data);
       })
       .catch((err) => console.error(err));
-  }, [myToys]);
+  }, []);
 
   //console.log(loggedUser);
 
